@@ -1,8 +1,8 @@
 package edu.kh.variable.ex1;
 
 import java.util.Scanner;
-
-					// ->
+//자바에서 미리 만들어 둔 Scanner를 얻어옴
+//                 -> 해당 클래스에 사용 가능
 
 public class VariableExample6 {
 
