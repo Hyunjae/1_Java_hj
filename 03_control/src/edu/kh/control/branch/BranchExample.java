@@ -143,7 +143,7 @@ public class BranchExample {
 		
 		int ran = (int)(Math.random() * 50 + 1);
 		// 0.0 <= x < 1.0
-		// 0.0 * 50 <= x * 50 < 1.0 * 50
+		// 0.0 * 50 <= x * 50 < 1.0 * 50  //난수 x에 50을 곱해서 50x가 되어도 난수이므로 x로 표기
 		// 0.0 <= x * 50 < 50.0
 		// 1.0 <= x * 50 + 1 < 51.0
 		// 1 <= (int)(x * 50 + 1) < 51  ---> 1 ~ 50 사이 난수
@@ -152,8 +152,9 @@ public class BranchExample {
 		
 //		System.out.println(ran);
 		
-		int input;
+		int input = 0;
 		int count = 1;
+		
 		
 		while(true) {
 			System.out.print(count + "번 입력 : ");
@@ -169,6 +170,19 @@ public class BranchExample {
 			}
 			count++;
 		}
+//		while(input != ran) {
+//			System.out.print(count + "번 입력 : ");
+//			input = sc.nextInt();
+//			
+//			if(ran>input) {
+//				System.out.println("UP");				
+//			} 
+//			if(ran<input){
+//				System.out.println("Down");
+//			} count++;
+//		} 
+//		
+//		System.out.printf("정답입니다! (총 입력 횟수 : %d회)", count-1);
 	}
 	
 	public void rpsGame() {

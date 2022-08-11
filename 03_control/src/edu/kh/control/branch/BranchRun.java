@@ -11,8 +11,8 @@ public class BranchRun {
 //		branchEx.ex3();
 //		branchEx.ex4();
 //		branchEx.ex5();
-//		branchEx.upDownGame();
-		branchEx.rpsGame();
+		branchEx.upDownGame();
+//		branchEx.rpsGame();
 		
 		
 		
