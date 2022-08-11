@@ -171,5 +171,100 @@ public class BranchExample {
 		}
 	}
 	
+	public void rpsGame() {
+		
+		   // 가위 바위 보 게임
+		   
+		   // 몇판? : 3
+		   
+		   // 1번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 플레이어 승!
+		   // 현재 기록 : 1승 0무 0패
+		   
+		   // 2번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  보
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 비겼습니다.
+		   // 현재 기록 : 1승 1무 0패
+		   
+		   // 3번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [바위]를 선택했습니다.
+		   // 졌습니다ㅠㅠ
+		   // 현재 기록 : 1승 1무 1패
+		
+		// -> 0/1/2
+		// 0 : 가위 / 1 : 바위 / 2 : 보
+		
+//		System.out.println(ran);
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("몇판? : ");
+		int game = sc.nextInt();
+		
+		System.out.println();
+		
+		int win=0;
+		int lose=0;
+		int draw=0;
+		
+		for(int i=1; i<=game; i++) {
+			System.out.println(i+"번째 게임");
+			
+			System.out.print("가위/바위/보 중 하나를 입력 해주세요 : ");
+			String input = sc.next();
+			
+			int ran = (int)(Math.random() * 3);
 	
+			if(input.equals("가위")) {
+				if(ran==0) {
+					System.out.println("컴퓨터는 [가위]를 선택했습니다.");
+					System.out.println("비겼습니다.");
+					draw++;
+				} else if(ran==1) {
+					System.out.println("컴퓨터는 [바위]를 선택했습니다.");
+					System.out.println("졌습니다ㅠㅠ");
+					lose++;
+				} else {
+					System.out.println("컴퓨터는 [보]를 선택했습니다.");
+					System.out.println("플레이어 승!");
+					win++;
+				}
+			} else if(input.equals("바위")) {
+				if(ran==0) {
+					System.out.println("컴퓨터는 [가위]를 선택했습니다.");
+					System.out.println("플레이어 승!");
+					win++;
+				} else if(ran==1) {
+					System.out.println("컴퓨터는 [바위]를 선택했습니다.");
+					System.out.println("비겼습니다.");
+					draw++;
+				} else {
+					System.out.println("컴퓨터는 [보]를 선택했습니다.");
+					System.out.println("졌습니다ㅠㅠ");
+					lose++;
+				}	
+			} else {
+				if(ran==0) {
+					System.out.println("컴퓨터는 [가위]를 선택했습니다.");
+					System.out.println("졌습니다ㅠㅠ");
+					lose++;
+				} else if(ran==1) {
+					System.out.println("컴퓨터는 [바위]를 선택했습니다.");
+					System.out.println("플레이어 승!");
+					win++;	
+				} else {
+					System.out.println("컴퓨터는 [보]를 선택했습니다.");
+					System.out.println("비겼습니다.");
+					draw++;
+				}
+			}
+			System.out.printf("현재 기록 : %d승 %d무 %d패", win, draw, lose);
+			System.out.println();
+			System.out.println();
+		}
+	}
 }
