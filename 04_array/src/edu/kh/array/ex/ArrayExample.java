@@ -406,7 +406,7 @@ public class ArrayExample {
 		System.out.println("arr : " + Arrays.toString(arr));
 		System.out.println("copyArr : " + Arrays.toString(copyArr));
 		
-		// 복사본의 값을 변경 -> 원본도 값이 변함 == 값을 공유함
+		// 복사본의 값을 변경 -> 데이터 공유 X -> 서로 다른 배열
 		copyArr[2] = 10000;
 		
 		System.out.println("[변경 후]");

@@ -7,7 +7,8 @@ public class JHJ {
 	String name = "정현재";
 	int age = 29;
 	String birthday = "1994-03-11";
-	int password = 1234;
+	private String password = "1234" ;
+	// private : 해당 클래스 내부에서만 접근 가능하다라는 뜻
 	
 	// 객체가 가지고 있는 기능
 	public void study() {
@@ -21,4 +22,8 @@ public class JHJ {
 		System.out.println("합 : " + (num1 + num2));
 	}
 	
+	// public : 같은 프로젝트 내부 누구든, 어디서든 접근 가능
+	public void showPassword() {
+		System.out.println("비밀번호 : ***" + password + "***");
+	}
 }

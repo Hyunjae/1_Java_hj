@@ -13,7 +13,11 @@ public class BasicRun {
 		System.out.println("나이 : " + 정현재.age);
 		System.out.println("생년월일 : " + 정현재.birthday);
 		
-		System.out.println("비밀번호 : " + 정현재.password);
+		// System.out.println("비밀번호 : " + 정현재.password);
+		// The field JHJ.password is not visible
+		
+		// 비밀번호를 볼 수 있는 기능을 호출 == 간접 접근 방법
+		정현재.showPassword();
 		
 		// 기능 수행
 		정현재.eat();
