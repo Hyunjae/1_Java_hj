@@ -272,53 +272,67 @@ public class ArrayPractice {
 	}
 	
 	public void practice13() {
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.print("문자열 : ");
-		String word = sc.next();
-		
-		char[] letter = new char[word.length()];
-		
-		String sum = "";
-		int count = 0;
-		
-		for(int i=0; i<letter.length; i++) {
-			
-			letter[i] = word.charAt(i) ;
-		}
-		for(int i=0; i<letter.length; i++) {
-			for(int x=0; x<i; x++) {
-				if(letter[x]==letter[i]) {
-				
-				}
-				
-			}
-			count++;
-			sum += letter[i] + ", ";
-		}
-		
-		System.out.print("문자열에 있는 문자 : ");
-		System.out.print(sum);
-		System.out.println("\n문자 개수 : " + count);
-		
+//		Scanner sc = new Scanner(System.in);
+//		
+//		System.out.print("문자열 : ");
+//		String word = sc.next();
+//		
+//		for(int x=0; x<word.length(); x++) {
+//			
+//		
+//		char[] letter = new char[word.length()];
+//		
+//		String sum = "";
+//		int count = 0;
+//		boolean flag = true;
+//		
+//		for(int i=0; i<letter.length; i++) {
+//			
+//			letter[i] = word.charAt(i) ;
+//		}
+//		for(int i=0; i<letter.length; i++) {
+//	
+//				flag = false;
+//				}
+//			}
+//		}
+//		
+//		if(flag) {
+//			
+//		}
+//		
+//		System.out.print("문자열에 있는 문자 : ");
+//		System.out.print(sum);
+//		System.out.println("\n문자 개수 : " + count);
+//		
 	}
 	
 	public void practice14() {
 		Scanner sc = new Scanner(System.in);
 		
-
-		System.out.print("배열의 크기를 입력하세요 : ");
-		int amount = sc.nextInt();
-		
-		String[] arr = new String[amount];
-		
-		for(int i=0; i<arr.length; i++) {
-			System.out.print((i+1)+"번째 문자열 : ");
-			arr[i] = sc.nextLine();
-		}
-		
-		System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
-		char moreInput = sc.next().charAt(0);			
+		while(true) {
+			System.out.print("배열의 크기를 입력하세요 : ");
+			int amount = sc.nextInt();
+			
+			String[] arr = new String[amount];
+			
+			for(int i=0; i<arr.length; i++) {
+				System.out.print((i+1)+"번째 문자열 : ");
+				arr[i] = sc.nextLine();
+				sc.nextLine();
+			}
+			
+			System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+			char moreInput = sc.next().charAt(0);			
+			
+			if(moreInput=='y') {
+				System.arraycopy(arr, 0, arr, 0, arr.length);
+			}
+			if(moreInput=='n') {
+				System.out.println(Arrays.toString(arr));
+				break;
+			}
+		} 
 	
 		
 		
