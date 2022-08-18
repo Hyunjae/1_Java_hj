@@ -18,7 +18,7 @@ public class Trainee {
 	
 	{ // instance block
 		email = "없음";
-		salary = 116000;
+		salary = 120000;
 	}
 	static { // static block
 		classRoom = 'A';  // instance block에 쓰면 static이기 때문에 매번 A가 나와서 불필요	

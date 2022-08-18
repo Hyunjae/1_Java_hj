@@ -1,5 +1,5 @@
 package edu.kh.oop.constructor.model.vo;
-
+/*
 public class Member {
 
 	// 추상화 -> 아이디, 비밀번호, 전화번호, 나이
@@ -109,10 +109,53 @@ public class Member {
 		this.memberId = memberId;
 	}
 	
-	
-
-	
 	// 메서드(기능)
+
+}
+*/
+
+public class Member {
+
+	private String memberId;
+	private String memberPw;
+	private String memberPhone;
+	private int memberAge;
 	
+	public Member() {
+		
+		memberId = "member01";
+		memberPw = "pass01!";
+		memberPhone = "010-1234-1234";
+		memberAge = 25;
+		
+		System.out.println("Member 객체가 생성 되었습니다.");
+	}
 	
+	public Member(String memberId, String memberPw, String memberPhone, int memberAge) {
+		this.memberId = memberId;
+		this.memberPw = memberPw;
+		this.memberPhone = memberPhone;
+		this.memberAge = memberAge;
+		
+		System.out.println(memberId);
+		System.out.println(memberPw);
+		System.out.println(memberPhone);
+		System.out.println(memberAge);	
+	}
+	
+	public Member(String memberId, String memberPw) {
+	}
+
+	public Member(int memberAge, String memberPhone) {
+		
+		this.memberAge = memberAge;
+		this.memberPhone = memberPhone;
+		
+	}
+	
+	public Member(String memberId, int memberAge, String memberPhone) {
+		
+		this(memberAge, memberPhone); 
+		this.memberId = memberId;
+	}
 }
