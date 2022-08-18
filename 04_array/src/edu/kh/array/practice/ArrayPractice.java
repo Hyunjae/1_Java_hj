@@ -310,6 +310,8 @@ public class ArrayPractice {
 	public void practice14() {
 		Scanner sc = new Scanner(System.in);
 		
+		int x=1;
+		
 		while(true) {
 			System.out.print("배열의 크기를 입력하세요 : ");
 			int amount = sc.nextInt();
@@ -403,6 +405,31 @@ public class ArrayPractice {
 		}
 	}
 	public void practice19() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("행 크기 : ");
+		int rowSize = sc.nextInt(); 
+		System.out.print("열 크기 : ");
+		int colSize = sc.nextInt(); 
+		
+		if(rowSize<1 || rowSize>10 || colSize<1 || rowSize>10) {
+			System.out.println("반드시 1~10 사이의 정수를 입력해야 합니다.");
+			System.out.print("행 크기 : ");
+			rowSize = sc.nextInt(); 
+			System.out.print("열 크기 : ");
+			colSize = sc.nextInt(); 
+		} 
+		
+		char[][] arr = new char[rowSize][colSize];
+		
+		for(int row=0; row<arr.length; row++) {
+			for(int col=0; col<arr[row].length; col++) {
+				char ran = (char)(Math.random()*26+65);
+				System.out.print(ran + " ");
+			}
+			System.out.println();
+		}
 		
 	}
 	
