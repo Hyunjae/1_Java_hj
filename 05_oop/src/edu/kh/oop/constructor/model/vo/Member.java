@@ -143,14 +143,14 @@ public class Member {
 		System.out.println(memberAge);	
 	}
 	
-	public Member(String memberId, String memberPw) {
-	}
+	public Member(String memberId, String memberPw) {}
+//	public Member(String memberPw, String memberId) {}
+// 	Duplicate method Member(String, String) in type Member
 
 	public Member(int memberAge, String memberPhone) {
 		
 		this.memberAge = memberAge;
 		this.memberPhone = memberPhone;
-		
 	}
 	
 	public Member(String memberId, int memberAge, String memberPhone) {
