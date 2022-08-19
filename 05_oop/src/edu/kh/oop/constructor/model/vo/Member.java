@@ -1,5 +1,5 @@
 package edu.kh.oop.constructor.model.vo;
-/*
+
 public class Member {
 
 	// 추상화 -> 아이디, 비밀번호, 전화번호, 나이
@@ -112,8 +112,8 @@ public class Member {
 	// 메서드(기능)
 
 }
-*/
 
+/*
 public class Member {
 
 	private String memberId;
@@ -159,3 +159,4 @@ public class Member {
 		this.memberId = memberId;
 	}
 }
+*/
