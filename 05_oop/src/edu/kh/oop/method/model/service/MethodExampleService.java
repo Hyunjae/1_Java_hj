@@ -11,7 +11,6 @@ public class MethodExampleService {
 	// 기본 생성자
 	public MethodExampleService() {}  // 생성자도 메서드다!
 	
-	
 	// 1. 매개변수 X, 반환형 X 메서드
 	public void method1() {
 		System.out.println("method1 실행");
@@ -34,7 +33,6 @@ public class MethodExampleService {
 		
 		System.out.println("합계 : " + sum);
 		System.out.println("평균 : " + (sum/ (3.0)));
-		
 	}
 	
 	// 3. 매개변수 X, 반환형 O 메서드
@@ -69,11 +67,6 @@ public class MethodExampleService {
 		case "/" : result = num1 / (double)num2; break;
 		case "%" : result = num1 % num2; break;
 		}
-		
 		return result;
 	}
-	
-	
-	
-	
 }

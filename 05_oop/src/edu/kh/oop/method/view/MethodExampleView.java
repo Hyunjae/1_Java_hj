@@ -13,15 +13,12 @@ public class MethodExampleView {
 
 	private MethodExampleService service = new MethodExampleService();
 	
-	
 	// void : 반환 값이 없음
 	public void displayMenu() {
-		
 		
 		int input = 0; // 메뉴 번호를 입력 받을 변수
 		
 		do {
-			
 			System.out.println("------------------------------");
 			System.out.println("1. 매개변수 X, 리턴 값 X");
 			System.out.println("2. 매개변수 O, 리턴 값 X");
@@ -61,9 +58,7 @@ public class MethodExampleView {
 			default : System.out.println("잘못 입력하셨습니다");
 			}
 			
-			
-		} while(input!=0); // input이 0이면 반복 종료
-		
+		} while(input!=0); // input이 0이면 반복 종료		
 	}
 	
 	// 정수 3개를 입력 받고, service.method2()를 호출하는 메서드 작성
@@ -98,9 +93,5 @@ public class MethodExampleView {
 		System.out.printf("%d %s %d = %.1f\n", 
 						input1, op, input2, 
 						service.method4(input1, input2, op));
-		
 	}
-	
-	
-	
 }
