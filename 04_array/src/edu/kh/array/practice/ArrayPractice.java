@@ -442,14 +442,93 @@ public class ArrayPractice {
 		
 		int[] colSize = new int[size];
 		
-		char sum = 0;
 		for(int x=0; x<colSize.length; x++) {
 			System.out.print(x + "열의 크기 : ");
-			colSize[x] = sc.nextInt();
-			int[][] arr = new int[x][];
-			arr[x][colSize[x]] += sum;
-			System.out.println(sum);
-		}	
+			colSize[x] = sc.nextInt();			
+			}
+		
+		int[][] arr = new int[size][];
+		
+		char alp = 'a'-1;
+		for(int row=0; row<arr.length; row++) {
+			for(int col=0; col<colSize[row]; col++) {
+				alp++;			
+				System.out.print(alp + " ");
+			}			
+			System.out.println();
+		}
 	}
 	
+	public void practice21() {
+		
+		String[] students = {
+				"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", 
+				"송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하"};
+		
+		String[][] arr1 = new String[3][2];
+		
+		System.out.println("== 1분단 ==");
+		
+		for(int row=0; row<arr1.length; row++) {
+			for(int col=0; col<arr1[row].length; col++) {
+				arr1[row][col] = students[2*row+col];
+				System.out.print(arr1[row][col] + " ");
+			}System.out.println();
+		}
+		
+		String[][] arr2 = new String[3][2];
+		
+		System.out.println("== 2분단 ==");
+		
+		for(int row=0; row<arr2.length; row++) {
+			for(int col=0; col<arr2[row].length; col++) {
+				arr2[row][col] = students[2*row+col+6];
+				System.out.print(arr2[row][col] + " ");
+			}System.out.println();
+		}
+	}
+	
+	public void practice22() {
+		Scanner sc = new Scanner(System.in);
+		
+		String[] students = {
+				"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", 
+				"송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하"};
+		
+		String[][] arr1 = new String[3][2];
+		
+		System.out.println("== 1분단 ==");
+		
+		for(int row=0; row<arr1.length; row++) {
+			for(int col=0; col<arr1[row].length; col++) {
+				arr1[row][col] = students[2*row+col];
+				System.out.print(arr1[row][col] + " ");
+			}System.out.println();
+		}
+		
+		String[][] arr2 = new String[3][2];
+		
+		System.out.println("== 2분단 ==");
+		
+		for(int row=0; row<arr2.length; row++) {
+			for(int col=0; col<arr2[row].length; col++) {
+				arr2[row][col] = students[2*row+col+6];
+				System.out.print(arr2[row][col] + " ");
+			}System.out.println();
+		}
+		
+		System.out.println("===========================");
+		
+		System.out.print("검색할 학생 이름을 입력하세요 : ");
+		String name = sc.next();
+
+//		if(arr1[row][col].equals(name)) {
+//			System.out.println("일치");
+//		} else {
+//			System.out.println("불일치");
+//		}
+		
+//		System.out.printf("검색하신 %s 학생은 %d분단 %d번째 줄 %s에 있습니다.", name, part, );
+		
+	}
 }
