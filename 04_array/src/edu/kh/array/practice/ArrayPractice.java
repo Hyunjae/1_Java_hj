@@ -433,8 +433,23 @@ public class ArrayPractice {
 		
 	}
 	
-	
-	
-	
+	public void practice20() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("행의 크기 : ");
+		int size = sc.nextInt();
+		
+		int[] colSize = new int[size];
+		
+		char sum = 0;
+		for(int x=0; x<colSize.length; x++) {
+			System.out.print(x + "열의 크기 : ");
+			colSize[x] = sc.nextInt();
+			int[][] arr = new int[x][];
+			arr[x][colSize[x]] += sum;
+			System.out.println(sum);
+		}	
+	}
 	
 }
