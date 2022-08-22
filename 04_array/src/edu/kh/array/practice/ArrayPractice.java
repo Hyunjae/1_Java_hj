@@ -522,11 +522,6 @@ public class ArrayPractice {
 		System.out.print("검색할 학생 이름을 입력하세요 : ");
 		String name = sc.next();
 
-//		if(arr1[row][col].equals(name)) {
-//			System.out.println("일치");
-//		} else {
-//			System.out.println("불일치");
-//		}
 		
 //		System.out.printf("검색하신 %s 학생은 %d분단 %d번째 줄 %s에 있습니다.", name, part, );
 		

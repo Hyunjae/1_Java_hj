@@ -43,7 +43,7 @@ public class StudentManagementView {
 			case 1: addStudent(); break;
 			case 2: printAll(); break;
 			case 3: selectIndex(); break;
-			case 4: break;
+			case 4: selectName(); break;
 			case 5: updateStudent(); break;
 			case 0: System.out.println("프로그램을 종료합니다.");break;
 			default : System.out.println("잘못 입력 하셨습니다.");
