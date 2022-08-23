@@ -524,6 +524,22 @@ public class ArrayPractice {
 
 		
 //		System.out.printf("검색하신 %s 학생은 %d분단 %d번째 줄 %s에 있습니다.", name, part, );
-		
 	}
+	
+	public void practice23() {
+		
+		String[][] arr = new String[6][6];
+		
+		for(int row=0; row<arr.length; row++) {
+			for(int col=0; col<arr[row].length; col++) {
+				if(row==0 && col==0) {
+					System.out.println(" ");
+				} else if(row==0 || col==0) {
+//					System.out.print();
+				} else {
+					System.out.println(" ");
+				}
+			} System.out.println();
+		}
+	}	
 }
