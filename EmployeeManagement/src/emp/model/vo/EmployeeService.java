@@ -74,11 +74,9 @@ public class EmployeeService {
 
 		for(Employee e : empList) {
 			if(id == e.getEmpId()) {
-				empList.get(id).setDepartmentTitle(dep);
-				empList.get(id).setJobName(job);
-				empList.get(id).setSalary(sal);
-			} else {
-				return false;
+				e.setDepartmentTitle(dep);
+				e.setJobName(job);
+				e.setSalary(sal);
 			}
 		}
 		return true;
@@ -96,4 +94,35 @@ public class EmployeeService {
 			}
 		} return false;
 	}
+	
+	/** 6. 입력 받은 부서와 일치 모든 사원 정보 조회
+	 * @param dep
+	 * @return resultList
+	 */
+	public List<Employee> searchDeparment(String dep) { 
+		List<Employee> resultList = new ArrayList<Employee>();
+		
+		for(Employee e : empList) {
+			if(dep.equals(e.getDepartmentTitle())) {
+				resultList.add(e);
+			}
+		} return resultList;
+	}
+		
+	/** 7. 입력 받은 급여 이상을 받는 모든 사원 정보 조회
+	 * @param dep
+	 * @return
+	 */
+	public List<Employee> searchSalary(int sal) { 
+		List<Employee> resultList = new ArrayList<Employee>();
+		
+		for(Employee e : empList) {
+			if(sal <= e.getSalary()) {
+				resultList.add(e);
+			}
+		} return resultList;
+	}
+	
+	
+	
 }

@@ -39,8 +39,8 @@ public class View {
 			case 3 : searchEmployee(); break;
 			case 4 : editEmployee(); break;
 			case 5 : deleteEmployee(); break;
-			case 6 : break;
-			case 7 : break;
+			case 6 : searchDepartment(); break;
+			case 7 : searchSalary(); break;
 			case 8 : break;
 			case 0 : break;
 			}
@@ -129,10 +129,10 @@ public class View {
 		System.out.print("급여 : ");
 		int sal = sc.nextInt();
 		
-		if(service.editEmployee(id, dep, job, sal) == false) {
-			System.out.println("일치하는 사번이 없습니다.");
-		} else {
+		if(service.editEmployee(id, dep, job, sal) == true) {
 			System.out.println("수정이 완료되었습니다.");
+		} else {
+			System.out.println("일치하는 사번이 없습니다.");
 		}
 	}
 	
@@ -149,10 +149,41 @@ public class View {
 		} else {
 			System.out.println("해당 사원의 정보가 삭제되었습니다.");
 		}
-		
 	}
 	
+	/**
+	 * 6. 입력 받은 부서와 일치 모든 사원 정보 조회
+	 */
+	public void searchDepartment() {
 	
+		System.out.print("부서를 입력하세요 >> ");
+		String dep = sc.next();
+		sc.nextLine();
+		
+		List<Employee> resultList = service.searchDeparment(dep);
+		
+		if(resultList.isEmpty()) {
+			System.out.println("검색 결과가 없습니다.");
+		} else {
+			for(Employee e : resultList) System.out.println(e);
+		}
+	}
+	
+	/**
+	 * 7. 입력 받은 급여 이상을 받는 모든 사원 정보 조회
+	 */
+	public void searchSalary() {
+		System.out.print("급여 입력하세요 >> ");
+		int sal = sc.nextInt();
+		
+		List<Employee> resultList = service.searchSalary(sal);
+		
+		if(resultList.isEmpty()) {
+			System.out.println("검색 결과가 없습니다.");
+		} else {
+			for(Employee e : resultList) System.out.println(e);
+		}
+	}
 	
 	
 	
