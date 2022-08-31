@@ -1,7 +1,9 @@
 package emp.model.vo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class EmployeeService {
 
@@ -122,6 +124,31 @@ public class EmployeeService {
 			}
 		} return resultList;
 	}
+	
+	
+	/**
+	 * 8. 부서별 급여 합 전체 조회
+	 */
+//	public void departmentSalary() {
+//		
+//		Employee e = new Employee();
+//		Map<String, Object> salartyMap = new HashMap<>();
+//		
+//		for(String key : map.keySet()) {
+//			
+//		}
+//		
+//		
+//	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

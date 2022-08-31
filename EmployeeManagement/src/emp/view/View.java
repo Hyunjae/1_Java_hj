@@ -2,6 +2,7 @@ package emp.view;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import emp.model.vo.Employee;
@@ -41,7 +42,7 @@ public class View {
 			case 5 : deleteEmployee(); break;
 			case 6 : searchDepartment(); break;
 			case 7 : searchSalary(); break;
-			case 8 : break;
+			case 8 : departmentSalary(); break;
 			case 0 : break;
 			}
 			
@@ -185,8 +186,18 @@ public class View {
 		}
 	}
 	
-	
-	
+	/**
+	 * 8. 부서별 급여 합 전체 조회
+	 */
+	public void departmentSalary() {
+//		
+//		Map<String, Object> map = service.departmentSalary();
+//		
+//		
+//		
+//		
+	}
+//	
 	
 	
 	
