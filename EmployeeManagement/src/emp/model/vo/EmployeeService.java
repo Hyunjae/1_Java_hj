@@ -129,27 +129,27 @@ public class EmployeeService {
 	/**
 	 * 8. 부서별 급여 합 전체 조회
 	 */
-//	public void departmentSalary() {
-//		
-//		Employee e = new Employee();
-//		Map<String, Object> salartyMap = new HashMap<>();
-//		
-//		for(String key : map.keySet()) {
-//			
-//		}
-//		
-//		
-//	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public Map<String, Integer> departmentSalary() {
+		
+		Map<String, Integer> map = new HashMap<>();
+		
+		for(Employee e : empList) {
+			
+			String dep = e.getDepartmentTitle();
+			int value =  map.get(dep) == null ? 0 : map.get(dep); // 삼항 연산자
+			// map에서 일치하는 dep가 없으면 0, 있으면 해당 value 반환
+			// map.get(dep) == 주어진 dep의 값 == salary의 합
+			// map에서는 Integer 값도 null을 가질 수가 있다
+			
+			// 일치하는 부서가 없으면 최초 값이니까 0 + 현재 salary 값
+			// 일치하는 부서가 있으면 기존에 있던 값을 map.get(dep)으로 불러오고
+			// 현재 salary를 더해준다는 뜻
+			
+			map.put(dep, value + e.getSalary());
+			// map에서는 중복되는 dep 값은 알아서 걸러준다
+		}
+		
+		return map;
+	}
 	
 }

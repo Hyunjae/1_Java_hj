@@ -190,14 +190,15 @@ public class View {
 	 * 8. 부서별 급여 합 전체 조회
 	 */
 	public void departmentSalary() {
-//		
-//		Map<String, Object> map = service.departmentSalary();
-//		
-//		
-//		
-//		
+		
+		System.out.println("<부서별 급여 합 전체 조회>");
+		
+		Map<String, Integer> map = service.departmentSalary();
+		
+		for(String key : map.keySet()) {
+			System.out.println(key + " : " + map.get(key));
+		}
 	}
-//	
 	
 	
 	
